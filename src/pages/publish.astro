@@ -1,0 +1,88 @@
+---
+import Base from '../layouts/Base.astro';
+---
+
+<Base title="How to Publish - WriteDown.Blog">
+  <h1 class="text-3xl font-bold tracking-tight mb-4">How to Publish</h1>
+  <p class="text-lg text-neutral-500 leading-relaxed mb-12">
+    Not a developer? No worries. You just need a free GitHub account and five minutes. By the end you'll feel like a true dev.
+  </p>
+
+  <div class="text-base text-neutral-700 leading-relaxed space-y-10">
+
+    <section>
+      <h2 class="text-xl font-semibold mb-3">1. Get a GitHub account</h2>
+      <p>
+        If you don't already have one, sign up at
+        <a href="https://github.com/signup" class="underline hover:text-neutral-500">github.com</a>.
+        It's free and takes about a minute.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-3">2. Write your post</h2>
+      <p>
+        Write your post anywhere you like — Google Docs, Notes, Word, a napkin you later transcribe. When you're happy with it, you'll need to convert it to <strong>Markdown</strong>.
+      </p>
+      <p class="mt-2">
+        Markdown is a simple way to format text using plain characters. For example,
+        <code class="bg-neutral-100 px-1.5 py-0.5 rounded text-sm">**bold**</code> becomes <strong>bold</strong> and
+        <code class="bg-neutral-100 px-1.5 py-0.5 rounded text-sm">## Heading</code> becomes a heading.
+      </p>
+      <p class="mt-2">
+        Don't want to learn Markdown? Ask any AI (ChatGPT, Claude, Gemini, etc.):
+      </p>
+      <blockquote class="border-l-2 border-neutral-300 pl-4 text-neutral-500 italic mt-3">
+        "Convert this text into Markdown format for a blog post"
+      </blockquote>
+      <p class="mt-2">Paste your text, and it'll hand you back a clean Markdown version ready to go.</p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-3">3. Add a small header</h2>
+      <p>
+        Every post needs a few lines at the very top called <strong>frontmatter</strong>. It tells the site your post's title, date, and who wrote it. Just copy this and fill in your details:
+      </p>
+      <pre class="bg-neutral-50 border border-neutral-200 rounded-md p-4 text-sm mt-3 overflow-x-auto"><code>---
+title: "Your Post Title"
+description: "A one-sentence summary of your post."
+date: 2026-03-15
+author: "Your Name"
+---
+
+Your Markdown content goes here...</code></pre>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-3">4. Submit it</h2>
+      <p>This is the "pull request" part. It sounds technical, but GitHub makes it pretty simple:</p>
+      <ol class="list-decimal list-inside space-y-2 mt-3">
+        <li>Go to the <a href="https://github.com/gabo-cs/writedown.blog/tree/main/src/content/posts" class="underline hover:text-neutral-500">posts folder</a> in the repo</li>
+        <li>Click <strong>Add file</strong> → <strong>Create new file</strong></li>
+        <li>Name it something like <code class="bg-neutral-100 px-1.5 py-0.5 rounded text-sm">my-post-title.md</code> (this becomes the URL)</li>
+        <li>Paste your frontmatter + Markdown content</li>
+        <li>Click <strong>Commit changes</strong> — GitHub will ask you to fork the repo (say yes)</li>
+        <li>Click <strong>Create pull request</strong></li>
+      </ol>
+      <p class="mt-3">That's it. Once the pull request is reviewed and merged, your post goes live.</p>
+    </section>
+
+    <section>
+      <h2 class="text-xl font-semibold mb-3">5. Optional: add a cover image</h2>
+      <p>
+        Want an image at the top of your post? Upload it to the
+        <a href="https://github.com/gabo-cs/writedown.blog/tree/main/public/images" class="underline hover:text-neutral-500">images folder</a>
+        in the same pull request, then add this line to your frontmatter:
+      </p>
+      <pre class="bg-neutral-50 border border-neutral-200 rounded-md p-4 text-sm mt-3 overflow-x-auto"><code>image: /images/your-image.jpg</code></pre>
+      <p class="mt-2 text-neutral-500 text-sm">Recommended size: 1200x630px. This also shows up as a preview when the link is shared.</p>
+    </section>
+
+    <section class="border-t border-neutral-100 pt-8">
+      <p class="text-neutral-400">
+        Still stuck? <a href="https://github.com/gabo-cs/writedown.blog/issues" class="underline hover:text-neutral-600">Open an issue</a> and we'll help you out.
+      </p>
+    </section>
+
+  </div>
+</Base>

@@ -52,11 +52,18 @@ const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
                     class="text-lg font-semibold tracking-tight hover:text-neutral-600"
                     >WriteDown.Blog</a
                 >
-                <a
-                    href="/about"
-                    class="text-sm text-neutral-500 hover:text-neutral-900"
-                    >About</a
-                >
+                <nav class="flex gap-4">
+                    <a
+                        href="/publish"
+                        class="text-sm text-neutral-500 hover:text-neutral-900"
+                        >Publish</a
+                    >
+                    <a
+                        href="/about"
+                        class="text-sm text-neutral-500 hover:text-neutral-900"
+                        >About</a
+                    >
+                </nav>
             </header>
 
             <main class="py-16">
@@ -68,10 +75,10 @@ const ogImage = image ? new URL(image, Astro.site).toString() : undefined;
             >
                 <p>
                     Got something to say? <a
-                        href="https://github.com/gabo-cs/writedown.blog"
+                        href="/publish"
                         class="underline hover:text-neutral-600"
-                        >Submit a post as a Pull Request.</a
-                    > Posts are just Markdown.
+                        >Learn how to publish</a
+                    > — all you need is a GitHub account.
                 </p>
             </footer>
         </div>
