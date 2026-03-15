@@ -1,0 +1,30 @@
+---
+import { getCollection } from 'astro:content';
+import Base from '../layouts/Base.astro';
+
+const posts = await getCollection('posts');
+const sortedPosts = posts.sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+
+<Base title="WriteDown.Blog">
+  <h1 class="text-4xl font-bold tracking-tight mb-4">WriteDown.Blog</h1>
+  <p class="text-xl text-neutral-500 leading-relaxed mb-2">
+    An open blogging platform.
+  </p>
+  <p class="text-base text-neutral-400 leading-relaxed mb-16">
+    Anyone can publish here by submitting a Markdown post through a pull request. No accounts, no algorithms, no gatekeepers.
+  </p>
+
+  <ul class="space-y-6">
+    {sortedPosts.map((post) => (
+      <li>
+        <a href={`/posts/${post.id}`} class="group block">
+          <h2 class="text-xl font-semibold group-hover:text-neutral-600">{post.data.title}</h2>
+          <time class="text-sm text-neutral-400" datetime={post.data.date.toISOString().slice(0, 10)}>
+            {post.data.date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+          </time>
+        </a>
+      </li>
+    ))}
+  </ul>
+</Base>
