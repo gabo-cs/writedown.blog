@@ -61,7 +61,7 @@ It's much worse at questioning the frame itself.
 
 That kind of lateral, "what if" thinking—the kind that challenges assumptions at a fundamental level—is still deeply human.
 
-A great example of this comes from Spotify.
+A great example of this comes from Spotify. <a href="https://gantavya.hashnode.dev/how-spotify-beat-the-tcpip-protocol" target="_blank">[source]</a>
 
 At one point, they were obsessed with reducing playback latency to near zero. The obvious constraint? The internet itself. TCP/IP simply doesn't allow for that level of responsiveness in the way they needed.
 
