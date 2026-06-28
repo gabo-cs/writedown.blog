@@ -3,7 +3,7 @@ title: "The Quiet Cost of AI Overdependence"
 description: "AI tools make it dangerously easy to skip the thinking that makes engineers good. Here's what that looks like in practice—and what's at stake."
 date: 2026-04-11
 author: Gabriel Coronado
-image: /images/ai-overdependence.png
+image: /images/ai-overdependence.webp
 ---
 
 AI is one of the most powerful tools we've ever had as developers. Used well, it's a force multiplier. We all know that.

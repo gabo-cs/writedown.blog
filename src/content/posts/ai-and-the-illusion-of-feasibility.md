@@ -3,7 +3,7 @@ title: "AI and the Illusion of Feasibility"
 description: "Large language models can generate extremely convincing plans for ideas that collapse under real-world constraints."
 date: 2026-03-13
 author: Gabriel Coronado
-image: /images/the-illusion-of-feasibility-pic.png
+image: /images/the-illusion-of-feasibility-pic.webp
 ---
 
 Large language models are extremely good at generating plans.
